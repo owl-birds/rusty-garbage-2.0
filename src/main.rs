@@ -1,0 +1,32 @@
+mod big_o;
+mod training;
+mod concepts;
+mod test_directory;
+
+fn main() {
+    // println!("Hello, world!");
+    // big_o::run();
+    // println!("Pointer");
+    training::run();
+    // let user1 = training::person::Person::new("Johnm", 21, "janitor");
+    // user1.not_secret();
+    // let color1 = training::test::Color{
+    //     red: 255,
+    //     green: 255,
+    //     blue: 255,
+    //     code: 'A',
+    // };
+    // println!("{}", color1.details());
+    // let mut temp_string_stack_1 = concepts::stack::String_Stack::new();
+    // temp_string_stack_1.insert("user1");
+    // temp_string_stack_1.insert("user2");
+    // println!("is user1 is in the stack : {}", temp_string_stack_1.has("user1"));
+    // println!("is user2 is in the stack : {}", temp_string_stack_1.has("user2"));
+    // println!("is user3 is in the stack : {}", temp_string_stack_1.has("user3"));
+    // temp_string_stack_1.print_stack_collections();
+    // concepts::stack::run();
+    // crate::concepts::stack::run(); 
+    // u can do it like this too
+    // test_directory::test::run();
+}
+
