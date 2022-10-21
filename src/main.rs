@@ -2,12 +2,17 @@ mod big_o;
 mod training;
 mod concepts;
 mod test_directory;
+mod rust_book;
 
 fn main() {
+
+    // rust book tutorial : https://doc.rust-lang.org/book/foreword.html
+    rust_book::intro::intro_hello();
+
     // println!("Hello, world!");
     // big_o::run();
     // println!("Pointer");
-    training::run();
+    // training::run();
     // let user1 = training::person::Person::new("Johnm", 21, "janitor");
     // user1.not_secret();
     // let color1 = training::test::Color{
