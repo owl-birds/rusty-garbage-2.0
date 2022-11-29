@@ -23,7 +23,14 @@ pub fn guess_the_number(){
         // rust allow us to reuse the guess
         // variable name rather than forcing
         // us to create two unique variables
-        let guess: i32 = guess.trim().parse().expect("Please input a number");
+        
+        // let guess: i32 = guess.trim().parse().expect("Please input a number");
+        let guess: i32 = match guess.trim().parse() {
+            Ok(num) => num,
+            Err(_) => continue,
+        };
+        
+        //  The trim method eliminates \n or \r\n
         //  The trim method eliminates \n or \r\n
         // & sign is a referencea
         println!("The secret number : {random_number}");
