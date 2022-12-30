@@ -149,4 +149,18 @@ pub fn ownership_intro(){
     // cleaned up by drop unless 
     // ownership of the data has been 
     // moved to another variable.
+
+    // REFERENCES and BORROWING
+}
+pub fn main() {
+    let s1 = String::from("hello");
+
+    let (s2, len) = calculate_length(s1);
+
+    println!("The length of '{}' is {}.", s2, len);
+}
+
+pub fn calculate_length(s: String) -> (String, usize) {
+    let length = s.len(); // len() returns the length of a String
+    (s, length)
 }
