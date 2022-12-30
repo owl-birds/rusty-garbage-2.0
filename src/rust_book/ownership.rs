@@ -109,10 +109,13 @@ pub fn ownership_intro(){
     // now let see 
     let s1 = String::from("hello");
     let s2 = s1;// s2 point to s1
+    let s3 = s2.clone();
     // not make a copy of s1
     // println!("{s1}"); // ERROR value borrowed here after move
     // BORROWED
+    // so s1 was moved into s2
     println!("{s2}");
+    println!("{s3}");
     // To ensure memory safety, after 
     // the line let s2 = s1;, Rust 
     // considers s1 as no longer 
@@ -122,4 +125,28 @@ pub fn ownership_intro(){
     // what happens when you try to 
     // use s1 after s2 is created; it 
     // won’t work:
+
+    // For more information about 
+    // this error, try 
+    // `rustc --explain E0382`.
+    // error: could not compile `ownership`
+    // due to previous error
+
+    
+    // All the integer types, such as u32.
+    // The Boolean type, bool, with values true and false.
+    // All the floating-point types, such as f64.
+    // The character type, char.
+    // Tuples, if they only contain types that also implement Copy. For example, (i32, i32) implements Copy, but (i32, String) does not.
+
+    // The ownership of a variable 
+    // follows the same pattern every 
+    // time: assigning a value to 
+    // another variable moves it. 
+    // When a variable that includes 
+    // data on the heap goes out of 
+    // scope, the value will be 
+    // cleaned up by drop unless 
+    // ownership of the data has been 
+    // moved to another variable.
 }
