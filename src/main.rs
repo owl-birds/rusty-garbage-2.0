@@ -8,7 +8,10 @@ fn main() {
 
     // rust book tutorial : https://doc.rust-lang.org/book/foreword.html
     rust_book::intro::intro_hello();
-    rust_book::intro::guess_the_number();
+    // rust_book::intro::guess_the_number();
+    rust_book::common_programming::common_progamming_concepts();
+    //
+    rust_book::ownership::ownership_intro();
     // println!("Hello, world!");
     // big_o::run();
     // println!("Pointer");
