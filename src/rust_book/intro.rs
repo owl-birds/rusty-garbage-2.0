@@ -1,6 +1,7 @@
 // use library
 use std::io;
 use std::cmp::Ordering;
+
 // downloaded library
 use rand::{Rng, random};
 
