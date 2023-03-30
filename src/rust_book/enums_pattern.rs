@@ -87,4 +87,66 @@ pub fn main(){
     let ipv6_2 = IpAddrKind2::V6(String::from("::1"));
     println!("{:#?}", ipv4_2);
     println!("{:#?}", ipv6_2);
+    
+    // you can include many kind of data inside enum
+    // even enum it self, struct etc
+
+    #[derive(Debug)]
+    struct Ipv4{
+        //
+    }
+    #[derive(Debug)]
+    struct Ipv6{
+        //   
+    }
+    #[derive(Debug)]
+    enum IpAddrKind3{
+        V4(Ipv4),
+        V6(Ipv6)
+    }
+
+    // Quit has no data associated with it at all.
+    // Move has named fields, like a struct does.
+    // Write includes a single String.
+    // ChangeColor includes three i32 values.
+    
+    // 
+    struct QuitMessage;
+    struct MoveMessage{
+        x: i32,
+        y: i32
+    }
+    struct WriteMessage(String);
+    struct  ChangeColorMessage(i32,i32,i32);
+    let quit_message = QuitMessage;
+    // But if we used the different structs, each of 
+    // which has its own type, we couldn’t as easily 
+    // define a function to take any of these kinds \
+    // of messages as we could with the Message enum 
+    // defined in Listing 6-2, which is a single type.
+    
+    // There is one more similarity between enums 
+    // and structs: just as we’re able to define 
+    // methods on structs using impl, we’re also 
+    // able to define methods on enums. Here’s a 
+    // method named call that we could define on our 
+    // Message enum:
+
+    // Enums (or enumerations) is a user-defined 
+    // data type that allows us to select a value 
+    // from a list of related values.
+    #[derive(Debug)]
+    enum Message{
+        Quit,
+        Move {x: i32, y: i32},
+        Write(String),
+        ChangeColor(i32, i32, i32)
+    }
+    impl Message{
+        fn call(&self){
+            //
+        }
+    }
+    let msg = Message::Write(String::from("HELLO WORLD!"));
+    println!("{:#?}", msg);
 }
