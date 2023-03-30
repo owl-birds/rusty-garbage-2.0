@@ -13,8 +13,9 @@ fn main() {
     //
     // rust_book::ownership::ownership_intro();
     //
-    rust_book::intro_struct::main();
+    // rust_book::intro_struct::main();
     //
+    rust_book::enums_pattern::main();
     /////////////////
     /////////////////
     /////////////////
