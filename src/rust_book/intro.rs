@@ -1,22 +1,22 @@
 // use library
-use std::io;
 use std::cmp::Ordering;
+use std::io;
 
 // downloaded library
-use rand::{Rng, random};
+use rand::{random, Rng};
 
-pub fn intro_hello(){
+pub fn intro_hello() {
     println!("HELLO WORLD!");
 }
 
-pub fn guess_the_number(){
+pub fn guess_the_number() {
     println!("GUess the number Game.");
     let max_number: i32 = 1000;
     let min_number: i32 = 900;
     let random_number: i32 = rand::thread_rng().gen_range(min_number..=max_number);
-    loop {    
+    loop {
         println!("Please Input your guess. ({min_number} - {max_number})");
-        let mut guess: String  = String::new();
+        let mut guess: String = String::new();
         io::stdin()
             .read_line(&mut guess)
             .expect("Failed to read the input (line)");
@@ -24,19 +24,19 @@ pub fn guess_the_number(){
         // rust allow us to reuse the guess
         // variable name rather than forcing
         // us to create two unique variables
-        
+
         // let guess: i32 = guess.trim().parse().expect("Please input a number");
         let guess: i32 = match guess.trim().parse() {
             Ok(num) => num,
             Err(_) => continue,
         };
-        
+
         //  The trim method eliminates \n or \r\n
         //  The trim method eliminates \n or \r\n
         // & sign is a referencea
         println!("The secret number : {random_number}");
         println!("You guessed : {guess}");
-        match guess.cmp(&random_number){
+        match guess.cmp(&random_number) {
             Ordering::Less => println!("Too small!"),
             Ordering::Greater => println!("Too big!"),
             Ordering::Equal => {
@@ -44,9 +44,8 @@ pub fn guess_the_number(){
                 break;
             }
         }
-    }   
+    }
 }
 // cargo doc --open :: cargo will build
-// documentation provided by all of 
+// documentation provided by all of
 // your depedencies locally
-

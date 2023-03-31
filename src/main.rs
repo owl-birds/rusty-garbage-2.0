@@ -1,11 +1,10 @@
 mod big_o;
-mod training;
 mod concepts;
-mod test_directory;
 mod rust_book;
+mod test_directory;
+mod training;
 
 fn main() {
-
     // rust book tutorial : https://doc.rust-lang.org/book/foreword.html
     // rust_book::intro::intro_hello();
     // rust_book::intro::guess_the_number();
@@ -40,8 +39,7 @@ fn main() {
     // println!("is user3 is in the stack : {}", temp_string_stack_1.has("user3"));
     // temp_string_stack_1.print_stack_collections();
     // concepts::stack::run();
-    // crate::concepts::stack::run(); 
+    // crate::concepts::stack::run();
     // u can do it like this too
     // test_directory::test::run();
 }
-
