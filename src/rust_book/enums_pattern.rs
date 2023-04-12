@@ -363,4 +363,9 @@ pub fn main() {
     if let Some(max) = config_max{
         println!("the maximum is configured to be {max}")
     }
+    let some_number = Some(5);
+    match some_number {
+        Some(num) => println!("CHAR {}", num),
+        None => println!("NONE")
+    }
 }

@@ -3,6 +3,7 @@ mod concepts;
 mod rust_book;
 mod test_directory;
 mod training;
+mod file_based_projects;
 
 fn main() {
     // rust book tutorial : https://doc.rust-lang.org/book/foreword.html
